@@ -85,31 +85,30 @@
 // Console.ReadLine();
 
 Console.Write("Введите ваше имя: ");
-string name = Console.ReadLine();
+string? name = Console.ReadLine();
 Console.Write("Введите вашу фамилию: ");
-string surname = Console.ReadLine();
+string? surname = Console.ReadLine();
 Console.Write("Введите вашу группу: ");
-string group = Console.ReadLine();
+string? group = Console.ReadLine();
 Console.Write("Введите ваш год рождения: ");
-string birthyear = int.Parse(Console.ReadLine());
-Console.Write("Введите ваш средний балл(напр 4.5): ");
-string gpa = double.Parse(Console.ReadLine());
+int birthyear = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите ваш средний балл(напр 4,5): ");
+double gpa = Convert.ToDouble(Console.ReadLine());
 
 int age = 2026 - birthyear;
 bool isExcellent = gpa >= 4.5;
-// string status;
-// if (isExcellent) status = "Отличник";
-// else status = "Хорошист";
 
 string status = isExcellent ? "Отличник" : "Хорошист";
 
-Console.WriteLine("Ваша анкета");
-Console.WriteLine($"Имя {name} {surname}");
+Console.WriteLine("-----------------------");
+Console.WriteLine("Ваша анкета: ");
+Console.WriteLine($"Имя: {name} {surname}");
 Console.WriteLine($"Группа: {group}");
-Console.WriteLine($"Возраст {age}");
-Console.WriteLine($"Средний балл {gpa}");
-Console.WriteLine($"Статус {status}");
-Console.WriteLine($"Лет до 30 {30 - age}");
-
-Console.WriteLine("Нажмите enter для выхода");
+Console.WriteLine($"Возраст: {age}");
+Console.WriteLine($"Средний балл: {gpa}");
+Console.WriteLine($"Статус: {status}");
+Console.WriteLine($"Лет до 30: {30 - age}");
+Console.WriteLine("-----------------------");
+Console.WriteLine(" ");
+Console.Write("Нажмите enter для выхода >> ");
 Console.ReadLine();
