@@ -100,6 +100,7 @@ bool isExcellent = gpa >= 4.5;
 
 string status = isExcellent ? "Отличник" : "Хорошист";
 
+Console.WriteLine(" ");
 Console.WriteLine("-----------------------");
 Console.WriteLine("Ваша анкета: ");
 Console.WriteLine($"Имя: {name} {surname}");
